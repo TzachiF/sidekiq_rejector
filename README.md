@@ -2,6 +2,10 @@
 
 [ ![Codeship Status for tzachi_fraiman/sidekiq_rejector](https://codeship.com/projects/27641140-90ca-0131-c50a-063de6e749ae/status?branch=master)](https://codeship.com/projects/16331)
 
+[![Code Climate](https://codeclimate.com/github/TzachiF/sidekiq_rejector/badges/gpa.svg)](https://codeclimate.com/github/TzachiF/sidekiq_rejector)
+
+[![Test Coverage](https://codeclimate.com/github/TzachiF/sidekiq_rejector/badges/coverage.svg)](https://codeclimate.com/github/TzachiF/sidekiq_rejector/coverage)
+
 The simple way for rejecting jobs when code introduced with unwanted behavior(bug) and there is a must to stop handling this type of jobs until
 a fix is issued. 
 
