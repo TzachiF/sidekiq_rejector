@@ -4,8 +4,8 @@
 module SidekiqRejector
   module Middleware
     class Client
-      ENABLE_VAR = 'SidekiqRejectorEnabled'
-      REJECT_VALUES = 'SidekiqRejectorValues'
+      ENABLE_VAR = 'SIDEKIQ_REJECTOR_ENABLED'
+      REJECT_VALUES = 'SIDEKIQ_REJECTOR_VALUES'
       TRUE = 'true'
 
       def call(worker_class, item, queue, redis_pool = nil)

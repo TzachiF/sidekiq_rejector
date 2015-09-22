@@ -31,9 +31,9 @@ Or install it yourself as:
 
 All that you need in case you want to exclude jobs is to configure two environment variables  
 
-SidekiqRejectorEnabled = true  
+SIDEKIQ_REJECTOR_ENABLED = true  
 
-SidekiqRejectorValues = 'comma separated string' with values of the method to stop (when called using delay) OR the worker name.  
+SIDEKIQ_REJECTOR_VALUES = 'comma separated string' with values of the method to stop (when called using delay) OR the worker name.  
  
 There is also a utility class that will remove jobs directly from Redis. This is for a situation were a huge amount of jobs already queued and they may clog the background workers.
 
