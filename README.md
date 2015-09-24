@@ -6,6 +6,8 @@
 
 [![Test Coverage](https://codeclimate.com/github/TzachiF/sidekiq_rejector/badges/coverage.svg)](https://codeclimate.com/github/TzachiF/sidekiq_rejector/coverage)
 
+[![Gem Version](https://badge.fury.io/rb/sidekiq_rejector.svg)](http://badge.fury.io/rb/sidekiq_rejector)
+
 The simple way for rejecting jobs when code introduced with unwanted behavior(bug) and there is a must to stop handling this type of jobs until
 a fix is issued. 
 
