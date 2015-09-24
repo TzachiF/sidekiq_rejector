@@ -31,11 +31,14 @@ module SidekiqRejector
       end
 
       def remove_job?(item)
-        values_arr = ENV[REJECT_VALUES].split(',')
-        values_arr.each do |value|
+        splited_reject_values.each do |value|
           return true if item.include?(value)
         end
         false
+      end
+
+      def splited_reject_values
+        @splited_reject_values ||= ENV[REJECT_VALUES].split(',')
       end
     end
   end
