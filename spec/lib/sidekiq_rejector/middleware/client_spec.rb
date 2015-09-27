@@ -21,7 +21,7 @@ describe SidekiqRejector::Middleware::Client do
 
       it "should return nil AND block should NOT be exceuted" do
         ENV[SidekiqRejector::Middleware::Client::ENABLE_VAR] = 'true'
-        ENV[SidekiqRejector::Middleware::Client::REJECT_VALUES] = 'SomeWorker'
+        ENV[SidekiqRejector::Middleware::Client::REJECT_VALUES] = { worker: ['SomeWorker'] }.to_json
         block_to_exec = Proc.new { block.exec_block }
         expect(block).to receive(:exec_block).never
         result = subject.call nil, msg, queue, &block_to_exec 

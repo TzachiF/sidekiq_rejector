@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name           = 'sidekiq_rejector'
-  s.version        = '0.1.1'
+  s.version        = '0.2.0'
   s.date           = '2015-09-15'
   s.summary        = "Allows rejecting jobs by configuration of environment variables."
   s.description    = s.summary
