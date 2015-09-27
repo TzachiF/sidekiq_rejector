@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sidekiq_rejector (0.0.1)
+    sidekiq_rejector (0.1.1)
 
 GEM
   remote: http://rubygems.org/

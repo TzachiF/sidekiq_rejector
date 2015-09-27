@@ -31,14 +31,7 @@ module SidekiqRejector
       end
 
       def remove_job?(item)
-        splited_reject_values.each do |value|
-          return true if item.include?(value)
-        end
-        false
-      end
-
-      def splited_reject_values
-        @splited_reject_values ||= ENV[REJECT_VALUES].split(',')
+        Helpers::Validator.new(ENV[REJECT_VALUES]).reject?(item)
       end
     end
   end
