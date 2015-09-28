@@ -35,7 +35,16 @@ All that you need in case you want to exclude jobs is to configure two environme
 
 SIDEKIQ_REJECTOR_ENABLED = true  
 
-SIDEKIQ_REJECTOR_VALUES = 'comma separated string' with values of the method to stop (when called using delay) OR the worker name.  
+SIDEKIQ_REJECTOR_VALUES = 'comma separated string' with values of the method to stop (when called using delay) OR the worker name.
+
+From version 2.0 the SIDEKIQ_REJECTOR_VALUES would be a json object with three string arrays:
+```ruby
+{
+  queue:  [...], # name of queues
+  worker: [...], # worker classes
+  method: [...]  # method names
+}.to_json
+```
  
 There is also a utility class that will remove jobs directly from Redis. This is for a situation were a huge amount of jobs already queued and they may clog the background workers.
 
