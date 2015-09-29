@@ -13,7 +13,7 @@ Only sidekiq 3 is supported.
 
 Add this line to your application's Gemfile:
 
-    gem 'sidekiq-rejector'
+    gem 'sidekiq_rejector'
 
 And then execute:
 
@@ -21,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install sidekiq-rejector
+    $ gem install sidekiq_rejector
 
 ## Usage
 
